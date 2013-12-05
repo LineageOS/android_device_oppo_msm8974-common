@@ -85,8 +85,6 @@ TARGET_CONTINUOUS_SPLASH_ENABLED := true
 TARGET_USES_ION := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 HAVE_ADRENO_SOURCE:= false
-VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
