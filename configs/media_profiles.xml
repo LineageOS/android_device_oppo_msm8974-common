@@ -181,33 +181,33 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="156000"
+             bitRate="256000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
-            bitRate="100000000"
+            bitRate="65000000"
             width="4096"
             height="2160"
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="156000"
+            bitRate="320000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="4kuhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-            bitRate="100000000"
+            bitRate="60000000"
             width="3840"
             height="2160"
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="156000"
+            bitRate="320000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -422,7 +422,7 @@
 
     <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
-            bitRate="100000000"
+            bitRate="65000000"
             width="4096"
             height="2160"
             frameRate="30" />
@@ -435,7 +435,7 @@
 
     <EncoderProfile quality="timelapse4kuhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-            bitRate="100000000"
+            bitRate="60000000"
             width="3840"
             height="2160"
             frameRate="30" />
@@ -766,7 +766,7 @@
         maxHFRMode="0"  />
 
     <AudioEncoderCap name="aac" enabled="true"
-        minBitRate="8000" maxBitRate="96000"
+        minBitRate="8000" maxBitRate="32000"
         minSampleRate="8000" maxSampleRate="48000"
         minChannels="1" maxChannels="6" />
 
