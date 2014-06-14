@@ -674,10 +674,18 @@
         <ctl name="DEC4 Volume" value="84" />
     </path>
 
+    <path name="sec-mic">
+        <ctl name="DEC3 MUX" value="ADC4" />
+        <ctl name="ADC4 Volume" value="19" />
+        <ctl name="DEC3 Volume" value="84" />
+    </path>
+
+    <!-- Not functional
     <path name="anc-mic">
         <ctl name="DEC2 MUX" value="ADC5" />
+        <ctl name="ADC5 Volume" value="19" />
         <ctl name="DEC2 Volume" value="84" />
-    </path>
+    </path> -->
 
 
     <!-- Recording paths -->
@@ -690,9 +698,8 @@
     <path name="speaker-mic">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SLIM_0_TX Channels" value="One" />
-        <ctl name="SLIM TX7 MUX" value="DEC2" />
-        <ctl name="ADC5 Volume" value="19" />
-        <path name="anc-mic" />
+        <ctl name="SLIM TX7 MUX" value="DEC3" />
+        <path name="sec-mic" />
     </path>
 
     <path name="headset-mic">
