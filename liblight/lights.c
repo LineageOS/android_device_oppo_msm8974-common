@@ -50,11 +50,20 @@ const char *const BUTTONS_FILE
 const char *const RED_LED_FILE
         = "/sys/class/leds/red/brightness";
 
+const char *const RED_LED_FILE2
+        = "/sys/class/leds/rgb_red/brightness";
+
 const char *const GREEN_LED_FILE
         = "/sys/class/leds/green/brightness";
 
+const char *const GREEN_LED_FILE2
+        = "/sys/class/leds/rgb_green/brightness";
+
 const char *const BLUE_LED_FILE
         = "/sys/class/leds/blue/brightness";
+
+const char *const BLUE_LED_FILE2
+        = "/sys/class/leds/rgb_blue/brightness";
 
 const char *const LED_FREQ_FILE
         = "/sys/class/leds/red/device/grpfreq";
@@ -142,8 +151,11 @@ set_speaker_light_locked(struct light_device_t *dev,
         blink = 0;
         pwm = 0;
         write_int(RED_LED_FILE, (colorRGB >> 16) & 0xFF);
+        write_int(RED_LED_FILE2, (colorRGB >> 16) & 0xFF);
         write_int(GREEN_LED_FILE, (colorRGB >> 8) & 0xFF);
+        write_int(GREEN_LED_FILE2, (colorRGB >> 8) & 0xFF);
         write_int(BLUE_LED_FILE, colorRGB & 0xFF);
+        write_int(BLUE_LED_FILE2, colorRGB & 0xFF);
         write_int(LED_BLINK_FILE, blink);
         return 0;
     }
@@ -190,8 +202,11 @@ set_speaker_light_locked(struct light_device_t *dev,
     }
 
     write_int(RED_LED_FILE, (colorRGB >> 16) & 0xFF);
+    write_int(RED_LED_FILE2, (colorRGB >> 16) & 0xFF);
     write_int(GREEN_LED_FILE, (colorRGB >> 8) & 0xFF);
+    write_int(GREEN_LED_FILE2, (colorRGB >> 8) & 0xFF);
     write_int(BLUE_LED_FILE, colorRGB & 0xFF);
+    write_int(BLUE_LED_FILE2, colorRGB & 0xFF);
 
     if (blink) {
         write_int(LED_FREQ_FILE, freq);
