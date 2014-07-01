@@ -33,7 +33,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.cne.rc \
     init.qcom-common.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
@@ -78,7 +77,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.gapless.enabled=false \
     qcom.hw.aac.encoder=true \
     tunnel.audio.encode=true \
-    media.aac_51_output_enabled=true
+    media.aac_51_output_enabled=true \
+    audio.offload.pcm.enable=true
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -204,23 +204,26 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libbson
 
-
-# proprietary wifi display, if available
-ifneq ($(QCPATH),)
-PRODUCT_BOOT_JARS += WfdCommon
-endif
-
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
+ifneq ($(QCPATH),)
+# proprietary wifi display, if available
+PRODUCT_BOOT_JARS += WfdCommon
+
 # Connectivity Engine support
+ifeq ($(BOARD_USES_QCNE),true)
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
-    services-ext
+    services-ext \
+    init.cne.rc
 
 PRODUCT_PROPERTY_OVERRIDES +=
     persist.cne.feature=1
+
+endif
+endif
 
 # Enable Bluetooth HFP service
 PRODUCT_PROPERTY_OVERRIDES +=

@@ -47,7 +47,7 @@ vendor/lib/lib-sec-disp.so
 vendor/lib/libStDrvInt.so
 
 # GPS
-app/com.qualcomm.location.apk
+-app/com.qualcomm.location.apk
 bin/gsiff_daemon
 bin/quipc_igsn
 bin/quipc_main
@@ -162,31 +162,16 @@ bin/time_daemon
 -vendor/lib/libtime_genoff.so
 
 # Listen service
-vendor/lib/liblistenhardware.so
-vendor/lib/liblistenjni.so
--vendor/lib/liblisten.so
-vendor/lib/liblistensoundmodel.so
+#vendor/lib/liblistenhardware.so
+#vendor/lib/liblistenjni.so
+#-vendor/lib/liblisten.so
+#vendor/lib/liblistensoundmodel.so
 
 # QuickBoot
 -app/QuickBoot.apk
 
 # Fastcharge
 bin/hvdcp
-
-# CNE
-bin/cnd
-etc/cne/andsfCne.xml
-etc/cne/NsrmConfiguration.xml
-etc/cne/SwimConfig.xml
-etc/permissions/cneapiclient.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.jar
-vendor/lib/libcneapiclient.so
-vendor/lib/libcneconn.so
-vendor/lib/libcneqmiutils.so
-vendor/lib/libcneutils.so
-vendor/lib/libNimsWrap.so
-vendor/lib/libxml.so
 
 # WiFi
 lib/libwcnss_qmi.so
