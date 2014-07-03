@@ -99,6 +99,20 @@ on boot
     #For bridgemgr daemon to inform the USB driver of the correct transport
     chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
+    # For find7s notification LED
+    chown system system /sys/class/leds/led:rgb_red/brightness
+    chown system system /sys/class/leds/led:rgb_red/ramp_step_ms
+    chown system system /sys/class/leds/led:rgb_red/duty_pcts
+    chown system system /sys/class/leds/led:rgb_red/blink
+    chown system system /sys/class/leds/led:rgb_green/brightness
+    chown system system /sys/class/leds/led:rgb_green/ramp_step_ms
+    chown system system /sys/class/leds/led:rgb_green/duty_pcts
+    chown system system /sys/class/leds/led:rgb_green/blink
+    chown system system /sys/class/leds/led:rgb_blue/brightness
+    chown system system /sys/class/leds/led:rgb_blue/ramp_step_ms
+    chown system system /sys/class/leds/led:rgb_blue/duty_pcts
+    chown system system /sys/class/leds/led:rgb_blue/blink
+
     # For setting tcp delayed ack
     chown system system /sys/kernel/ipv4/tcp_delack_seg
     chown system system /sys/kernel/ipv4/tcp_use_userconfig
