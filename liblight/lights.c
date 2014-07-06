@@ -48,7 +48,7 @@ static struct light_state_t g_notification;
 static struct light_state_t g_battery;
 static struct light_state_t g_attention;
 
-static int g_led_is_dt = 0;
+char device[92];
 
 const char *const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
@@ -113,9 +113,9 @@ void init_globals(void)
      * Traditional LED drivers control blinking via grpfreq/grppwm.
      * DT based LED drivers control blinking via ramp_step_ms/duty_pcts.
      *
-     * Thus, if duty_pcts exists, the driver is DT based.
+     * Thus, if find7s, the driver is DT based.
      */
-    g_led_is_dt = (access(LED_DT_DUTY_FILE, R_OK) == 0);
+    property_get("ro.oppo.device", device);
 }
 
 static int
@@ -289,7 +289,7 @@ static int
 set_speaker_light_locked(struct light_device_t *dev,
         struct light_state_t const *state)
 {
-    if (g_led_is_dt)
+    if (strstr(device, "find7s"))
         return set_speaker_light_locked_dt(dev, state);
 
     return set_speaker_light_locked_drv(dev, state);
