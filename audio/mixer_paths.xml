@@ -625,8 +625,10 @@
         <path name="spk" />
         <ctl name="RX3 Digital Volume" value="80" />
         <ctl name="RX4 Digital Volume" value="80" />
+        <!--
         <ctl name="SLIM_0_RX Format" value="S24_LE" />
         <ctl name="SLIM_0_RX SampleRate" value="KHZ_192" />
+        -->
     </path>
 
     <path name="voice-speaker">
@@ -639,8 +641,10 @@
         <path name="hph" />
         <ctl name="RX1 Digital Volume" value="84" />
         <ctl name="RX2 Digital Volume" value="84" />
+        <!--
         <ctl name="SLIM_0_RX Format" value="S24_LE" />
         <ctl name="SLIM_0_RX SampleRate" value="KHZ_192" />
+        -->
     </path>
 
     <path name="voice-headphones">
@@ -655,8 +659,10 @@
         <ctl name="RX2 Digital Volume" value="84" />
         <ctl name="RX3 Digital Volume" value="80" />
         <ctl name="RX4 Digital Volume" value="80" />
+        <!--
         <ctl name="SLIM_0_RX Format" value="S24_LE" />
         <ctl name="SLIM_0_RX SampleRate" value="KHZ_192" />
+        -->
     </path>
 
 
