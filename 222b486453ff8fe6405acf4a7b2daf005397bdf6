@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba0121b8_8a35f047",
+        "filename": "liblight/lights.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-07-08T05:41:10Z",
+      "side": 1,
+      "message": "why not g_led_is_dt \u003d !strcmp(property_get(\"ro.oppo.device\", device), \"find7s\") ?",
+      "revId": "222b486453ff8fe6405acf4a7b2daf005397bdf6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
