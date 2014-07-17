@@ -630,8 +630,8 @@
 
     <path name="voice-speaker">
         <path name="spk" />
-        <ctl name="RX3 Digital Volume" value="84" />
-        <ctl name="RX4 Digital Volume" value="84" />
+        <ctl name="RX3 Digital Volume" value="86" />
+        <ctl name="RX4 Digital Volume" value="86" />
     </path>
 
     <path name="headphones">
