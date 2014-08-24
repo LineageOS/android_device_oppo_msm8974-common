@@ -324,6 +324,7 @@ on property:init.svc.bootanim=stopped
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
     write /dev/cpuctl/apps/cpu.notify_on_migrate 1
+    write /proc/sys/vm/dirty_writeback_centisecs 1500
 
     write /sys/block/mmcblk0/queue/scheduler row
     start mpdecision
