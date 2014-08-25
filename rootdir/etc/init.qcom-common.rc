@@ -144,6 +144,9 @@ on boot
     #venus
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
 
+    # Don't disable dmesg access for apps
+    write /proc/sys/kernel/dmesg_restrict 0
+
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
     restorecon_recursive /data/media
