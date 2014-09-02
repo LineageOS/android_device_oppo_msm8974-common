@@ -34,6 +34,24 @@
       "revId": "7f7d583b96be87b193f61dbc1f04b656905e1651",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_b555c11e",
+        "filename": "rootdir/etc/init.qcom-common.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 2147
+      },
+      "writtenOn": "2014-09-02T17:22:40Z",
+      "side": 1,
+      "message": "Yar, gerrit works in mysterious ways",
+      "parentUuid": "7a1b2928_9502453d",
+      "revId": "7f7d583b96be87b193f61dbc1f04b656905e1651",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
