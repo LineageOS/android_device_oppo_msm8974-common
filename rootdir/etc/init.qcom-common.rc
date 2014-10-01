@@ -164,7 +164,7 @@ on post-fs-data
     mkdir /persist/sensors 0775 system root
     write /persist/sensors/sensors_settings 1
     chmod 0644 /persist/sensors/sensors_settings
-    chown system.root /persist/sensors/sensors_settings
+    chown system root /persist/sensors/sensors_settings
     mkdir /data/misc/sensors 0775 system system
     restorecon_recursive /data/misc/sensors
 
@@ -597,7 +597,7 @@ service audiod /system/bin/audiod
    group system
 
 service wcnss-service /system/bin/wcnss_service
-    class main
+    class late_start
     user system
     group system wifi qcom_diag radio
     oneshot
