@@ -153,7 +153,7 @@ TARGET_GPS_HAL_PATH := device/oppo/msm8974-common/gps
 TARGET_PROVIDES_GPS_LOC_API := true
 
 # Use HW crypto for ODE
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # Enable CNE
 ifneq ($(QCPATH),)
