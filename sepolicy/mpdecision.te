@@ -36,16 +36,16 @@ allow mpdecision sysfs:file write;
 
 # This is needed to allow mpdecision to look at system's
 # /proc/PID/status file.
-r_dir_file(mpdecision, system)
+r_dir_file(mpdecision, system_server)
 r_dir_file(mpdecision, mediaserver)
 
 allow mpdecision self:capability sys_nice;
 
 # mpdecision socket access
-unix_socket_connect(system, mpdecision, mpdecision)
-unix_socket_send(system, mpdecision, mpdecision)
-allow system mpdecision:unix_stream_socket sendto;
-allow system mpdecision_socket:dir search;
+unix_socket_connect(system_server, mpdecision, mpdecision)
+unix_socket_send(system_server, mpdecision, mpdecision)
+allow system_server mpdecision:unix_stream_socket sendto;
+allow system_server mpdecision_socket:dir search;
 
 allow mpdecision self:capability sys_nice;
 
