@@ -42,4 +42,3 @@
 
 # Disk encryption
 /dev/qseecom                           u:object_r:qseecom_device:s0
-/dev/fscklogs(/.*)?                    u:object_r:fscklogs:s0
