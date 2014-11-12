@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a122d0e_a8629fab",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-12T12:44:21Z",
+      "side": 0,
+      "message": "For now you may still want USES_QCOM_BSP and ENABLE_QC_AV_ENHANCEMENTS, I don\u0027t think it\u0027s been decided whether we\u0027re getting rid of those.",
+      "revId": "fcb340ec20c542e15124a85d9779dec035d85f5d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
