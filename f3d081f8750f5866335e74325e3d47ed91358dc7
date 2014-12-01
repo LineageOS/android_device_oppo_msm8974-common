@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bab6814e_3c208f9b",
+        "filename": "configs/media_profiles.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 10327
+      },
+      "writtenOn": "2014-12-01T14:05:02Z",
+      "side": 1,
+      "message": "bitRate is defined twice here",
+      "revId": "f3d081f8750f5866335e74325e3d47ed91358dc7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
