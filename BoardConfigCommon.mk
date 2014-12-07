@@ -171,4 +171,15 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         device/oppo/msm8974-common/sepolicy
 
+BOARD_SEPOLICY_UNION += \
+		file_contexts \
+		file.te \
+		genfs_contexts \
+		mediaserver.te \
+		property_contexts \
+		property.te \
+		rmt_storage.te \
+		system_app.te \
+		untrusted_app.te
+
 -include vendor/oppo/msm8974-common/BoardConfigVendor.mk

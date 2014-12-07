@@ -1,0 +1,4 @@
+allow untrusted_app su_exec:file { read open execute_no_trans };
+allow untrusted_app superuser_device:sock_file { read write create setattr unlink getattr };
+allow untrusted_app sudaemon:unix_stream_socket { connectto read write setopt ioctl };
+allow untrusted_app superuser_device:dir { create rw_dir_perms setattr unlink };
