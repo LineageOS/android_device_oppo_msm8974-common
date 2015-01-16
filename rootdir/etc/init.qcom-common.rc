@@ -522,8 +522,10 @@ service qseecomd /system/bin/qseecomd
     user root
     group root
 
-service charger /charger
+service charger /sbin/healthd -c
     class charger
+    critical
+    seclabel u:r:healthd:s0
 
 service hvdcp /system/bin/hvdcp
     class core
@@ -536,9 +538,10 @@ on property:persist.usb.hvdcp.detect=true
 on property:persist.usb.hvdcp.detect=false
     stop hvdcp
 
-service qbcharger /charger -m 1
+service qbcharger /sbin/healthd -m 1
     disabled
     oneshot
+    seclabel u:r:healthd:s0
 
 on property:sys.qbcharger.enable=true
     start qbcharger
