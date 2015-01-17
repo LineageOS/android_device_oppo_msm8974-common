@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a9d85d2_0f6e3cc9",
+        "filename": "rootdir/etc/init.qcom-common.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-01-17T10:49:47Z",
+      "side": 1,
+      "message": "Doesn\u0027t this result in irsc_util not having a domain?",
+      "revId": "357f11da689b3716084b507161cbc4f52421504b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
