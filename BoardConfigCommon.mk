@@ -17,9 +17,6 @@
 # inherit from Oppo common
 -include device/oppo/common/BoardConfigCommon.mk
 
-# Include path
-TARGET_SPECIFIC_HEADER_PATH := device/oppo/msm8974-common/include
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_NO_BOOTLOADER := true
