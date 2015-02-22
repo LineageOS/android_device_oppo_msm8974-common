@@ -1,0 +1,18 @@
+type ppd, domain;
+type ppd_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(ppd)
+
+allow ppd init:unix_stream_socket { read write accept listen };
+allow ppd property_socket:sock_file write;
+
+# Allow to set hw.cabl.*
+allow ppd hw_cabl_prop:property_service set;
+
+# /dev/graphics/fb0
+allow ppd graphics_device:chr_file { read write ioctl open };
+allow ppd graphics_device:dir r_dir_perms;
+
+allow ppd self:process execmem;
+
