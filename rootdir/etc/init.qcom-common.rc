@@ -285,6 +285,19 @@ on post-fs-data
     chmod 0644 /sys/class/timed_output/vibrator/vtg_max
     chmod 0644 /sys/class/timed_output/vibrator/vtg_min
 
+    chown root system /sys/devices/platform/mipi_hitachi.2049/kgamma_r
+    chown root system /sys/devices/platform/mipi_hitachi.2049/kgamma_g
+    chown root system /sys/devices/platform/mipi_hitachi.2049/kgamma_b
+    chown root system /sys/devices/platform/mipi_hitachi.2049/kgamma_apply
+    chmod 0664 /sys/devices/platform/mipi_hitachi.2049/kgamma_r
+    chmod 0664 /sys/devices/platform/mipi_hitachi.2049/kgamma_g
+    chmod 0664 /sys/devices/platform/mipi_hitachi.2049/kgamma_b
+    chmod 0664 /sys/devices/platform/mipi_hitachi.2049/kgamma_apply
+    restorecon /sys/devices/platform/mipi_hitachi.2049/kgamma_r
+    restorecon /sys/devices/platform/mipi_hitachi.2049/kgamma_g
+    restorecon /sys/devices/platform/mipi_hitachi.2049/kgamma_b
+    restorecon /sys/devices/platform/mipi_hitachi.2049/kgamma_apply
+
     setprop vold.post_fs_data_done 1
 
     #Create folder for mm-qcamera-daemon
