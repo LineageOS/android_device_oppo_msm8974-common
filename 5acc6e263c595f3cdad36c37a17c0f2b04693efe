@@ -16,6 +16,24 @@
       "revId": "5acc6e263c595f3cdad36c37a17c0f2b04693efe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bacf61ea_9c31a70e",
+        "filename": "sepolicy/healthd.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2015-02-25T06:39:25Z",
+      "side": 1,
+      "message": "No this is actually where it is searching the root directory \"/\"",
+      "parentUuid": "bacf61ea_fc7423d0",
+      "revId": "5acc6e263c595f3cdad36c37a17c0f2b04693efe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
