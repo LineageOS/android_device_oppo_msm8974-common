@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "bacf61ea_3f1b4d74",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2015-02-25T08:43:02Z",
+      "side": 1,
+      "message": "denials",
+      "revId": "5acc6e263c595f3cdad36c37a17c0f2b04693efe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bacf61ea_fc7423d0",
         "filename": "sepolicy/healthd.te",
         "patchSetId": 1
