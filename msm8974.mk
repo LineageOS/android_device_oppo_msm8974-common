@@ -72,6 +72,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.pcm.24bit.enable=true \
     audio.deep_buffer.media=true
 
+# Reduce client buffer size for fast audio output tracks
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES +=
     bluetooth.hfp.client=1
