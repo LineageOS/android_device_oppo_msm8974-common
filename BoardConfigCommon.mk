@@ -157,6 +157,18 @@ endif
 # qcom sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
+# Smoosh these things
+TARGET_TRANSPARENT_COMPRESSION := .so,.odex
+
 BOARD_SEPOLICY_DIRS += \
         device/oppo/msm8974-common/sepolicy
 
