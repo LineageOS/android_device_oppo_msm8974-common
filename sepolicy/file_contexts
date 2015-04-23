@@ -13,3 +13,6 @@
 
 /persist/.genmac                                u:object_r:wifi_data_file:s0
 /persist/.bt_nv.bin                             u:object_r:bluetooth_data_file:s0
+
+/cache/com.cyanogenmod.keyhandler.dex           u:object_r:keyhandler_cache_file:s0
+
