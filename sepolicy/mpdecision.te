@@ -1,0 +1,2 @@
+allow mpdecision bootanim:dir search;
+allow mpdecision bootanim:file { read open };
