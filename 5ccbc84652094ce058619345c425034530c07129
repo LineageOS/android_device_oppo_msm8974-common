@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba84c18e_06147ef3",
+        "filename": "sepolicy/bootanim.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-05-04T11:24:25Z",
+      "side": 1,
+      "message": "This should be unix_socket_connect, not unix_socket_send.",
+      "revId": "5ccbc84652094ce058619345c425034530c07129",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba84c18e_26f982c9",
+        "filename": "sepolicy/mpdecision.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-05-04T11:24:25Z",
+      "side": 1,
+      "message": "I don\u0027t think this is right...",
+      "revId": "5ccbc84652094ce058619345c425034530c07129",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
