@@ -16,6 +16,24 @@
       "revId": "73a596fa3f39bcd72ecfd75650d38ca5416560c7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_a52aeae5",
+        "filename": "sepolicy/bootanim.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7874
+      },
+      "writtenOn": "2015-05-05T16:03:46Z",
+      "side": 1,
+      "message": "i still see the denial",
+      "parentUuid": "9a89bdaa_a5810a50",
+      "revId": "73a596fa3f39bcd72ecfd75650d38ca5416560c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
