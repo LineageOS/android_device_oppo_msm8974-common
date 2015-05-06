@@ -52,6 +52,29 @@
       "revId": "73a596fa3f39bcd72ecfd75650d38ca5416560c7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_f30e78e4",
+        "filename": "sepolicy/tee.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2015-05-06T14:26:31Z",
+      "side": 1,
+      "message": "Allowing of anyone but init to set system_prop is going away soon.  You should give the property it\u0027s own context instead.",
+      "range": {
+        "startLine": 1,
+        "startChar": 10,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "73a596fa3f39bcd72ecfd75650d38ca5416560c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
