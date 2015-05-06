@@ -34,6 +34,24 @@
       "revId": "73a596fa3f39bcd72ecfd75650d38ca5416560c7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_b304f0c6",
+        "filename": "sepolicy/bootanim.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-05-06T14:01:23Z",
+      "side": 1,
+      "message": "You might need unix_socket_connect(bootanim, mpctl, mpdecision) instead?",
+      "parentUuid": "9a89bdaa_a52aeae5",
+      "revId": "73a596fa3f39bcd72ecfd75650d38ca5416560c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
