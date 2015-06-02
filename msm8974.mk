@@ -199,10 +199,6 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libxml2
 
-# USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
 # System properties
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
