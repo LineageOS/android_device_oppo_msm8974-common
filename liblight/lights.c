@@ -33,6 +33,10 @@
 
 #include <hardware/lights.h>
 
+#ifdef ENABLE_GAMMA_CORRECTION
+#include "brightness_gamma.h"
+#endif
+
 #ifndef min
 #define min(a,b) ((a)<(b)?(a):(b))
 #endif
@@ -154,6 +158,13 @@ rgb_to_brightness(const struct light_state_t *state)
     return ((77*((color>>16)&0x00ff))
             + (150*((color>>8)&0x00ff)) + (29*(color&0x00ff))) >> 8;
 }
+
+#ifdef ENABLE_GAMMA_CORRECTION
+static int
+brightness_apply_gamma (int brightness) {
+    return brightness_gamma[brightness];
+}
+#endif
 
 static int
 is_lit(struct light_state_t const *state)
@@ -318,6 +329,9 @@ set_light_backlight(struct light_device_t *dev,
 
     pthread_mutex_lock(&g_lock);
 
+#ifdef ENABLE_GAMMA_CORRECTION
+    brightness = brightness_apply_gamma(brightness);
+#endif
     err = write_int(LCD_FILE, brightness);
 
     pthread_mutex_unlock(&g_lock);
