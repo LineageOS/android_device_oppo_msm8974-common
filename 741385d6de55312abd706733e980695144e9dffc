@@ -16,6 +16,24 @@
       "revId": "741385d6de55312abd706733e980695144e9dffc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da36d5c6_5df2db9b",
+        "filename": "msm8974.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2015-06-19T19:34:12Z",
+      "side": 0,
+      "message": "I left it there for now because a bunch of devices list it. Will it break builds if the file is missing?",
+      "parentUuid": "da36d5c6_dddc0b49",
+      "revId": "741385d6de55312abd706733e980695144e9dffc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
