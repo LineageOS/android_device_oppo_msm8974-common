@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ff52f3f_a5e04a98",
+        "filename": "wifi/WCNSS_qcom_cfg.ini",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 8394
+      },
+      "writtenOn": "2015-06-29T13:02:23Z",
+      "side": 1,
+      "message": "If I change this to 1, i don\u0027t have single wifi drop!",
+      "revId": "741385d6de55312abd706733e980695144e9dffc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
