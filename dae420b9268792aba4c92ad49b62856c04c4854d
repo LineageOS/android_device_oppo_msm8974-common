@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ffa3b31_de0e8531",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2015-07-01T21:12:56Z",
+      "side": 1,
+      "message": "Are these used for anything? I don\u0027t see them on find7s",
+      "range": {
+        "startLine": 81,
+        "startChar": 4,
+        "endLine": 81,
+        "endChar": 36
+      },
+      "revId": "dae420b9268792aba4c92ad49b62856c04c4854d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
