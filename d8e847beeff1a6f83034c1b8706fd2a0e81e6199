@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ffa3b31_81dc1c19",
+        "filename": "wifi/WCNSS_qcom_cfg.ini",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 8394
+      },
+      "writtenOn": "2015-07-02T14:15:53Z",
+      "side": 1,
+      "message": "Fast traninsition statement is missing",
+      "revId": "d8e847beeff1a6f83034c1b8706fd2a0e81e6199",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
