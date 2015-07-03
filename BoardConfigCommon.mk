@@ -136,6 +136,9 @@ TARGET_RIL_VARIANT := caf
 # Use HW crypto for ODE
 TARGET_HW_DISK_ENCRYPTION := true
 
+# Enable keymaster app loading check
+TARGET_SUPPORTS_QSEECOM_APP_CHECK := true
+
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
