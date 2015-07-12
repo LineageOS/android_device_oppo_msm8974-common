@@ -136,22 +136,22 @@ vendor/lib/libmm-abl-oem.so
 
 # Qualcomm framework
 bin/irsc_util
-vendor/lib/libdiag.so
+-vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
+-vendor/lib/libdsutils.so
+-vendor/lib/libidl.so
+-vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
-vendor/lib/libqmi.so
+-vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_qmux.so
+-vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
+-vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 vendor/lib/libsystem_health_mon.so
 
@@ -202,4 +202,5 @@ vendor/lib/liblistensoundmodel.so
 -app/QuickBoot/QuickBoot.apk
 
 # WiFi
+-lib/libwpa_qmi_eap_proxy.so
 lib/libwcnss_qmi.so
