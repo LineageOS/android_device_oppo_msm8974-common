@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff0f0b1f_fd2383bd",
+        "filename": "wifi/WCNSS_qcom_cfg.ini",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 7254
+      },
+      "writtenOn": "2015-07-13T06:25:24Z",
+      "side": 1,
+      "message": "You sure this is the correct config? CcxEnabled is not there (but EseEnabled is): https://github.com/CyanogenMod/android_kernel_oneplus_msm8974/blob/cm-12.1/drivers/staging/prima/CORE/HDD/inc/wlan_hdd_cfg.h",
+      "revId": "5fda99746cce4c0923957d2fca0848a97b0c0581",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
