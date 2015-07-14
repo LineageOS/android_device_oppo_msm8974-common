@@ -19,8 +19,8 @@ LOCAL_SRC_FILES := \
     wrapper/QualcommCamera.cpp
 
 LOCAL_CFLAGS = -Wall -Werror
-#Debug logs are enabled
-#LOCAL_CFLAGS += -DDISABLE_DEBUG_LOG
+# Debug logs are disabled
+LOCAL_CFLAGS += -DDISABLE_DEBUG_LOG
 
 LOCAL_CFLAGS += -DDEFAULT_ZSL_MODE_ON
 LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON
