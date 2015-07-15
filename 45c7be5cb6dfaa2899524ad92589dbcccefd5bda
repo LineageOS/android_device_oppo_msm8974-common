@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff0f0b1f_041ed70b",
+        "filename": "cmhw/org/cyanogenmod/hardware/AutoContrast.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-07-15T23:53:58Z",
+      "side": 1,
+      "message": "if (...) {",
+      "revId": "45c7be5cb6dfaa2899524ad92589dbcccefd5bda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff0f0b1f_e41ac315",
+        "filename": "cmhw/org/cyanogenmod/hardware/AutoContrast.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-07-15T23:53:58Z",
+      "side": 1,
+      "message": "Might need a null check here to avoid a possible NPE if FileUtils.readOneLine fails.",
+      "range": {
+        "startLine": 54,
+        "startChar": 20,
+        "endLine": 54,
+        "endChar": 28
+      },
+      "revId": "45c7be5cb6dfaa2899524ad92589dbcccefd5bda",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
