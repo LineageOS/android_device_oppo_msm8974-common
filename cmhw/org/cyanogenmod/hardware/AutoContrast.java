@@ -23,21 +23,19 @@ import android.os.SystemProperties;
 import java.io.File;
 
 /**
- * Facemelt mode!
- *
- * Depends on CABC to be enabled on this hardware.
+ * Auto Contrast Optimization
  */
-public class SunlightEnhancement {
+public class AutoContrast {
 
-    private static String FILE_SRE = "/sys/class/graphics/fb0/sre";
+    private static String FILE_ACO = "/sys/class/graphics/fb0/aco";
 
     /**
-     * Whether device supports SRE
+     * Whether device supports ACO
      *
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        File f = new File(FILE_SRE);
+        File f = new File(FILE_ACO);
 
         if(f.exists()) {
             return true;
@@ -47,13 +45,13 @@ public class SunlightEnhancement {
     }
 
     /**
-     * This method return the current activation status of SRE
+     * This method return the current activation status of ACO
      *
-     * @return boolean Must be false when SRE is not supported or not activated, or
+     * @return boolean Must be false when ACO is not supported or not activated, or
      * the operation failed while reading the status; true in any other case.
      */
     public static boolean isEnabled() {
-        if (Integer.parseInt(FileUtils.readOneLine(FILE_SRE)) > 0) {
+        if (Integer.parseInt(FileUtils.readOneLine(FILE_ACO)) == 1) {
             return true;
         } else {
             return false;
@@ -61,17 +59,17 @@ public class SunlightEnhancement {
     }
 
     /**
-     * This method allows to setup SRE
+     * This method allows to setup ACO
      *
-     * @param status The new SRE status
-     * @return boolean Must be false if SRE is not supported or the operation
+     * @param status The new ACO status
+     * @return boolean Must be false if ACO is not supported or the operation
      * failed; true in any other case.
      */
     public static boolean setEnabled(boolean status) {
         if (status == true) {
-            return FileUtils.writeLine(FILE_SRE, "2");
+            return FileUtils.writeLine(FILE_ACO, "1");
         } else {
-            return FileUtils.writeLine(FILE_SRE, "0");
+            return FileUtils.writeLine(FILE_ACO, "0");
         }
     }
 
@@ -81,6 +79,6 @@ public class SunlightEnhancement {
      * @return boolean False if adaptive backlight is not a dependency
      */
     public static boolean isAdaptiveBacklightRequired() {
-        return true;
+        return false;
     }
 }
