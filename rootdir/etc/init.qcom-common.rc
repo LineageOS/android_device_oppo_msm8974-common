@@ -198,6 +198,9 @@ on post-fs-data
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
 
+    # Force regeneration of sensor registry
+    rm /data/misc/sensors/sns.reg
+
     # Create directory used by sensor subsystem
     mkdir /persist/sensors 0775 system root
     write /persist/sensors/sensors_settings 1
