@@ -181,7 +181,8 @@ set_speaker_light_locked_drv(struct light_device_t *dev __unused,
             break;
     }
 
-    colorRGB = state->color;
+    // state->color is an ARGB value, clear the alpha channel
+    colorRGB = (0xFFFFFF & state->color);
 
     if (onMS > 0 && offMS > 0) {
         int totalMS = onMS + offMS;
@@ -224,6 +225,7 @@ set_speaker_light_locked_dt(struct light_device_t *dev __unused,
 {
     int len;
     int onMS, offMS;
+    unsigned int brightness;
     unsigned int colorRGB;
 
     if (state == NULL) {
@@ -246,6 +248,12 @@ set_speaker_light_locked_dt(struct light_device_t *dev __unused,
 
     // state->color is an ARGB value, clear the alpha channel
     colorRGB = (0xFFFFFF & state->color);
+
+    // If a brightness has been applied by the user
+    brightness = (g_notification.color & 0xFF000000) >> 24;
+    if (brightness == 0x00) {
+        brightness = 0xFF;
+    }
 
     if (onMS > 0 && offMS > 0) {
         char dutystr[(3 + 1) * LED_DT_DUTY_STEPS + 1];
@@ -272,7 +280,7 @@ set_speaker_light_locked_dt(struct light_device_t *dev __unused,
         write_string(LED_DT_DUTY_FILE, dutystr);
         write_int(LED_DT_BLINK_FILE, 1);
     } else {
-        write_int(RED_LED_FILE, colorRGB ? 255 : 0);
+        write_int(RED_LED_FILE, colorRGB ? brightness : 0);
     }
 
     return 0;
@@ -373,7 +381,8 @@ set_light_notifications(struct light_device_t *dev,
             rgb[2] = (rgb[2] * brightness) / 0xFF;
 
         // Update with the new color
-        g_notification.color = (rgb[0] << 16) + (rgb[1] << 8) + rgb[2];
+        g_notification.color = (brightness << 24) + (rgb[0] << 16) +
+                (rgb[1] << 8) + rgb[2];
     }
     handle_speaker_battery_locked(dev, state);
 
