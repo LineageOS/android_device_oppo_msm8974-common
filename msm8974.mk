@@ -182,7 +182,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
-    curl \
     libnl_2 \
     libbson \
     libcnefeatureconfig \
