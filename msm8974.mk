@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom-common.rc \
+    init.qcom.power.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
@@ -101,6 +102,10 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8974
+
+# IO Scheduler
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=bfq
 
 # IPC router config
 PRODUCT_COPY_FILES += \
