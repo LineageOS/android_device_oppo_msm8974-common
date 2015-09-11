@@ -64,8 +64,6 @@ on enable-low-power
     write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 
-    write /dev/cpuctl/cpu.notify_on_migrate 1
-
     start mpdecision
 
 on charger
