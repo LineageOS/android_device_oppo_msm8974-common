@@ -24,10 +24,10 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`wc -l ../../oppo/msm8974-common/proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../../oppo/msm8974-common/proprietary-files.txt`
+COUNT=`wc -l ../../oppo/msm8974-common/device-proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ../../oppo/msm8974-common/device-proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../../oppo/msm8974-common/proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../../oppo/msm8974-common/device-proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
@@ -48,10 +48,10 @@ done
 PRODUCT_COPY_FILES += \\
 EOF
 LINEEND=" \\"
-COUNT=`wc -l device-proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' device-proprietary-files.txt`
+COUNT=`wc -l ../../$VENDOR/$DEVICE/device-proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ../../$VENDOR/$DEVICE/device-proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' device-proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../../$VENDOR/$DEVICE/device-proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
@@ -135,10 +135,10 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`wc -l ../../oppo/msm8974-common/proprietary-files-qc.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../../oppo/msm8974-common/proprietary-files-qc.txt`
+COUNT=`wc -l ../../oppo/msm8974-common/proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ../../oppo/msm8974-common/proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../../oppo/msm8974-common/proprietary-files-qc.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../../oppo/msm8974-common/proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
@@ -243,8 +243,7 @@ LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(BOARD_VENDOR),oppo)
 ifeq (\$(TARGET_BOARD_PLATFORM),msm8974)
-
-ifeq (\$(QCPATH),)
+ifneq (\$(filter find7 find7s n3,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.location
@@ -308,16 +307,6 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := liblisten
-LOCAL_MODULE_OWNER := $VENDOR
-LOCAL_SRC_FILES := proprietary/vendor/lib/liblisten.so
-LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include \$(BUILD_PREBUILT)
-
-include \$(CLEAR_VARS)
 LOCAL_MODULE := libmm-abl
 LOCAL_MODULE_OWNER := $VENDOR
 LOCAL_SRC_FILES := proprietary/vendor/lib/libmm-abl.so
@@ -367,6 +356,16 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
 LOCAL_MULTILIB := both
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libmdmdetect
+LOCAL_MODULE_OWNER := $VENDOR
+LOCAL_SRC_FILES := proprietary/lib/libmdmdetect.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
@@ -442,7 +441,6 @@ LOCAL_PROPRIETARY_MODULE := true
 include \$(BUILD_PREBUILT)
 
 endif
-
 endif
 endif
 
