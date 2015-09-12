@@ -30,8 +30,8 @@ rm -rf $BASE/*
 DEVBASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $DEVBASE/*
 
-extract ../../oppo/msm8974-common/proprietary-files-qc.txt $BASE
-extract ../../oppo/msm8974-common/proprietary-files.txt $DEVBASE
+extract ../../oppo/msm8974-common/proprietary-files.txt $BASE
+extract ../../oppo/msm8974-common/device-proprietary-files.txt $DEVBASE
 extract ../../$VENDOR/$DEVICE/device-proprietary-files.txt $DEVBASE
 
 ./../../oppo/msm8974-common/setup-makefiles.sh
