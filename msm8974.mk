@@ -77,6 +77,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES +=
     bluetooth.hfp.client=1
 
+# BoringSSL compat symbols wrapper
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
