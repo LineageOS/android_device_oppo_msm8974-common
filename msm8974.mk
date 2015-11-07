@@ -201,7 +201,6 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=true \
     persist.sys.usb.config=mtp
 
 # System properties
