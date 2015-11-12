@@ -80,6 +80,11 @@ PRODUCT_PROPERTY_OVERRIDES +=
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Data
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    rmnetcli
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     make_ext4fs \
