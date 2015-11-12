@@ -2,5 +2,9 @@
   {
     "repository": "android_device_oppo_common",
     "target_path": "device/oppo/common"
+  },
+  {
+    "repository": "android_vendor_qcom_opensource_dataservices",
+    "target_path": "vendor/qcom/opensource/dataservices"
   }
 ]
