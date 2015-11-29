@@ -84,11 +84,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli
 
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    setup_fs
-
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
@@ -163,10 +158,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine-8974.conf
 
-# USB
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
-
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
@@ -193,7 +184,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libnl_2 \
-    libbson \
     libcnefeatureconfig \
     libtinyxml \
     libxml2
