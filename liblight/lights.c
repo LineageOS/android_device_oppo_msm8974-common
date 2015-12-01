@@ -253,7 +253,8 @@ set_speaker_light_locked_dt(struct light_device_t *dev __unused,
             break;
     }
 
-    colorRGB = state->color;
+    // state->color is an ARGB value, clear the alpha channel
+    colorRGB = (0xFFFFFF & state->color);
 
     if (onMS > 0 && offMS > 0) {
         char dutystr[(3 + 1) * LED_DT_DUTY_STEPS + 1];
