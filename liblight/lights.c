@@ -162,7 +162,7 @@ is_lit(struct light_state_t const *state)
 }
 
 static int
-set_speaker_light_locked_drv(struct light_device_t *dev,
+set_speaker_light_locked_drv(struct light_device_t *dev __unused,
         struct light_state_t const *state)
 {
     int len;
@@ -228,7 +228,7 @@ set_speaker_light_locked_drv(struct light_device_t *dev,
 }
 
 static int
-set_speaker_light_locked_dt(struct light_device_t *dev,
+set_speaker_light_locked_dt(struct light_device_t *dev __unused,
         struct light_state_t const *state)
 {
     int len;
@@ -241,8 +241,12 @@ set_speaker_light_locked_dt(struct light_device_t *dev,
         return 0;
     }
 
+    ALOGD("set_speaker_light_locked_dt: flashMode=%d, color=%08X, flashOnMS=%d, flashOffMS=%d\n",
+            state->flashMode, state->color, state->flashOnMS, state->flashOffMS);
+
     switch (state->flashMode) {
         case LIGHT_FLASH_TIMED:
+        case LIGHT_FLASH_HARDWARE:
             onMS = state->flashOnMS;
             offMS = state->flashOffMS;
             break;
@@ -253,7 +257,8 @@ set_speaker_light_locked_dt(struct light_device_t *dev,
             break;
     }
 
-    colorRGB = state->color;
+    // state->color is an ARGB value, clear the alpha channel
+    colorRGB = (0xFFFFFF & state->color);
 
     if (onMS > 0 && offMS > 0) {
         char dutystr[(3+1)*LED_DT_DUTY_STEPS+1];
@@ -280,6 +285,7 @@ set_speaker_light_locked_dt(struct light_device_t *dev,
     }
     else {
         write_int(LED_DT_RED_BRIGHTNESS, colorRGB ? 255 : 0);
+        ALOGD("write_int: brightness=%d\n", (colorRGB ? 255 : 0));
     }
 
     return 0;
@@ -297,7 +303,7 @@ set_speaker_light_locked(struct light_device_t *dev,
 
 static void
 handle_speaker_battery_locked(struct light_device_t *dev,
-        const struct light_state_t *state)
+        const struct light_state_t *state __unused)
 {
     set_speaker_light_locked(dev, NULL);
     if (is_lit(&g_attention)) {
@@ -310,7 +316,7 @@ handle_speaker_battery_locked(struct light_device_t *dev,
 }
 
 static int
-set_light_backlight(struct light_device_t *dev,
+set_light_backlight(struct light_device_t *dev __unused,
         const struct light_state_t *state)
 {
     int err = 0;
@@ -326,7 +332,7 @@ set_light_backlight(struct light_device_t *dev,
 }
 
 static int
-set_light_buttons(struct light_device_t *dev,
+set_light_buttons(struct light_device_t *dev __unused,
         const struct light_state_t *state)
 {
     int err = 0;
@@ -454,7 +460,7 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "Oppo Lights Module",
+    .name = "OPPO Lights Module",
     .author = "The CyanogenMod Project",
     .methods = &lights_module_methods,
 };
