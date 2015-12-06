@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f91af0f_f3115855",
+        "filename": "liblight/lights.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2015-12-06T06:45:15Z",
+      "side": 1,
+      "message": "Is this change necessary for this commit?",
+      "range": {
+        "startLine": 249,
+        "startChar": 8,
+        "endLine": 249,
+        "endChar": 34
+      },
+      "revId": "4ac5956b82fac9bceb88e11dcdbfe0a0d2ff0183",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
