@@ -37,6 +37,12 @@ etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 
+# Radio
+framework/qcnvitems.jar
+framework/qcrilhook.jar
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/lib/libril-qc-qmi-1.so
+
 # Sensors
 etc/sensor_def_qcomdev.conf
 vendor/lib/libAKM8963.so
