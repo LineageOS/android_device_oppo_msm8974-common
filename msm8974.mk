@@ -76,10 +76,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1
 
-# Bluetooth
-PRODUCT_PROPERTY_OVERRIDES +=
-    bluetooth.hfp.client=1
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -202,7 +198,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     persist.timed.enable=true \
     ro.opengles.version=196608 \
-    ro.qualcomm.bt.hci_transport=smd \
     ro.telephony.default_network=9 \
     ro.use_data_netmgrd=true \
     persist.data.netmgrd.qos.enable=true \
