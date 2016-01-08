@@ -76,6 +76,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
