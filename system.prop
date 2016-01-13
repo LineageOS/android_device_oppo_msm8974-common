@@ -1,0 +1,52 @@
+# Camera
+camera2.portability.force_api=1
+
+# Display
+persist.hwc.mdpcomp.enable=true
+ro.opengles.version=196608
+
+# IO Scheduler
+sys.io.scheduler=bfq
+
+# Media
+af.fast_track_multiplier=1
+
+audio.deep_buffer.media=true
+persist.audio.fluence.voicecall=true
+ro.qc.sdk.audio.fluencetype=fluence
+use.voice.path.for.pcm.voip=true
+
+audio.offload.buffer.size.kb=32
+audio.offload.video=true
+audio.offload.multiple.enabled=false
+audio.offload.gapless.enabled=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+av.streaming.offload.enable=true
+
+mm.enable.smoothstreaming=true
+media.aac_51_output_enabled=true
+
+# Network
+persist.data.netmgrd.qos.enable=true
+persist.data.tcpackprio.enable=true
+ro.data.large_tcp_window_size=true
+
+# Perf
+ro.qualcomm.perf.cores_online=2
+ro.vendor.extension_library=libqti-perfd-client.so
+
+# Radio
+ro.telephony.call_ring.multiple=0
+ro.telephony.default_network=9
+
+ro.use_data_netmgrd=true
+
+telephony.lteOnGsmDevice=1
+
+# Time services
+persist.timed.enable=true
+
+# Wifi
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=15
