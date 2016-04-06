@@ -149,6 +149,10 @@ on boot
     chmod 0664 /sys/devices/virtual/graphics/fb1/vendor_name
     chmod 0664 /sys/devices/virtual/graphics/fb1/product_description
 
+    # Dynamic FPS
+    chown system graphics /sys/class/graphics/fb0/dynamic_fps
+    chmod 0664 /sys/class/graphics/fb0/dynamic_fps
+
     # Subsytem Restart
     #adsp
     write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
