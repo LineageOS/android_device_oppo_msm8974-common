@@ -143,5 +143,9 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
+# QCNE
+BOARD_USES_QCNE := true
+TARGET_LDPRELOAD := libNimsWrap.so
+
 # Inherit from the proprietary version
 -include vendor/oppo/msm8974-common/BoardConfigVendor.mk
