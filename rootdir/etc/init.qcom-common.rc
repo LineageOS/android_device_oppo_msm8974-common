@@ -137,9 +137,17 @@ on boot
     # create symlink for fb1 as HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
 
-    # MDP idle notifier
+    # Graphics node permissions
+    chown system graphics /sys/class/graphics/fb0/dyn_pu
+    chown system graphics /sys/class/graphics/fb0/dynamic_fps
     chown system graphics /sys/class/graphics/fb0/idle_time
+    chown system graphics /sys/class/graphics/fb0/mode
+    chown system graphics /sys/class/graphics/fb0/modes
+    chmod 0664 /sys/class/graphics/fb0/dyn_pu
+    chmod 0664 /sys/class/graphics/fb0/dynamic_fps
     chmod 0664 /sys/class/graphics/fb0/idle_time
+    chmod 0664 /sys/class/graphics/fb0/mode
+    chmod 0664 /sys/class/graphics/fb0/modes
 
     # setup permissions for fb1 related nodes
     chown system graphics /sys/class/graphics/fb1/hpd
@@ -148,10 +156,6 @@ on boot
     chmod 0664 /sys/devices/virtual/graphics/fb1/hpd
     chmod 0664 /sys/devices/virtual/graphics/fb1/vendor_name
     chmod 0664 /sys/devices/virtual/graphics/fb1/product_description
-
-    # Dynamic FPS
-    chown system graphics /sys/class/graphics/fb0/dynamic_fps
-    chmod 0664 /sys/class/graphics/fb0/dynamic_fps
 
     # Subsytem Restart
     #adsp
@@ -252,9 +256,6 @@ on post-fs-data
 
     chown root system /proc/touchpanel/keypad_enable
     chmod 0660 /proc/touchpanel/keypad_enable
-
-    chown system system /sys/devices/virtual/graphics/fb0/dyn_pu
-    chmod 0660 /sys/devices/virtual/graphics/fb0/dyn_pu
 
     chown system system /sys/class/timed_output/vibrator/vtg_level
     chown system system /sys/class/timed_output/vibrator/vtg_max
