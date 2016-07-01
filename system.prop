@@ -11,6 +11,8 @@ vendor.audio.offload.buffer.size.kb=32
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiple.enabled=false
 
+ro.config.vc_call_vol_steps=7
+
 # Bluetooth
 vendor.qcom.bluetooth.soc=pronto
 ro.bluetooth.hfp.ver=1.7
