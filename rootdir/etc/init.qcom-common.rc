@@ -356,6 +356,9 @@ service charger /sbin/healthd -c
     critical
     seclabel u:r:healthd:s0
 
+on charger
+    write /sys/class/leds/lcd-backlight/brightness 100
+
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
