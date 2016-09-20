@@ -19,9 +19,6 @@
 
 PLATFORM_PATH := device/oppo/msm8974-common
 
-# Include path
-TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_NO_BOOTLOADER := true
