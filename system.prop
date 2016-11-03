@@ -54,6 +54,9 @@ ro.use_data_netmgrd=true
 
 telephony.lteOnGsmDevice=1
 
+# Storage
+ro.sys.sdcardfs=true
+
 # Time services
 persist.timed.enable=true
 
