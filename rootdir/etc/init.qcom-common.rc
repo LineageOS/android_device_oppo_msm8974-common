@@ -372,7 +372,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 service mpdecision /system/bin/mpdecision --avg_comp
     class main
     user root
-    group system
+    group root readproc
     disabled
 
 service thermal-engine /system/vendor/bin/thermal-engine
@@ -403,6 +403,7 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     user bluetooth
     group bluetooth net_bt_admin qcom_diag diag radio
     disabled
+    seclabel u:r:bluetooth_loader:s0
     oneshot
 
 on property:bluetooth.hciattach=true
