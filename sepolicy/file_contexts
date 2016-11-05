@@ -1,3 +1,8 @@
+# Bluetooth
+/dev/smd3                                               u:object_r:hci_attach_dev:s0
+/persist/.bt_nv.bin                                     u:object_r:bluetooth_data_file:s0
+/system/etc/init.qcom.bt.sh                             u:object_r:bluetooth_loader_exec:s0
+
 # NV backup partitions
 /dev/block/platform/msm_sdcc\.1/by-name/oppodycnvbk     u:object_r:nvbackup_block_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/oppostanvbk     u:object_r:nvbackup_block_device:s0
@@ -9,6 +14,8 @@
 /data/cam_socket1                                       u:object_r:camera_socket:s0
 /data/cam_socket2                                       u:object_r:camera_socket:s0
 
-# BT/WiFi MAC
+# WiFi MAC
 /persist/.genmac                                        u:object_r:wifi_data_file:s0
-/persist/.bt_nv.bin                                     u:object_r:bluetooth_data_file:s0
+
+# mpdecision
+/data/misc/perfd(/.*)?                                  u:object_r:mpctl_socket:s0
