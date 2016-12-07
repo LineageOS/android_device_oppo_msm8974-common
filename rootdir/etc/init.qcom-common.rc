@@ -239,6 +239,8 @@ on post-fs-data
     chmod 0660 /proc/touchpanel/double_tap_enable
     chown root system /proc/touchpanel/double_swipe_enable
     chmod 0660 /proc/touchpanel/double_swipe_enable
+    chown root system /proc/touchpanel/up_arrow_enable
+    chmod 0660 /proc/touchpanel/up_arrow_enable
     chown root system /proc/touchpanel/down_arrow_enable
     chmod 0660 /proc/touchpanel/down_arrow_enable
     chown root system /proc/touchpanel/left_arrow_enable
