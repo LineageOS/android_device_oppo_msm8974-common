@@ -32,7 +32,6 @@ LOCAL_CFLAGS += -DDEFAULT_ZSL_MODE_ON
 LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON
 
 LOCAL_C_INCLUDES := \
-    $(LOCAL_PATH)/../stack/common \
     frameworks/native/include/media/openmax \
     $(call project-path-for,qcom-display)/libgralloc \
     $(call project-path-for,qcom-media)/libstagefrighthw \
@@ -55,5 +54,10 @@ LOCAL_HEADER_LIBRARIES := libnativebase_headers
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := camera_common_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/stack/common
+include $(BUILD_HEADER_LIBRARY)
 
 include $(BUILD_SHARED_LIBRARY)
