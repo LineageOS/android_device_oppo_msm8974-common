@@ -47,10 +47,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     tinymix
 
-# Browser
-PRODUCT_PACKAGES += \
-    Gello
-
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
