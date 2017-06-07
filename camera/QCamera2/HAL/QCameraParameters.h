@@ -479,6 +479,9 @@ public:
 
     static const char KEY_SELECTED_AUTO_SCENE[];
 
+    static const char FOCUS_MODE_MANUAL_POSITION[];
+    static const char WHITE_BALANCE_MANUAL_CCT[];
+
     enum {
         CAMERA_ORIENTATION_UNKNOWN = 0,
         CAMERA_ORIENTATION_PORTRAIT = 1,
