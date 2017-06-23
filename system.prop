@@ -11,6 +11,7 @@ vendor.audio.offload.buffer.size.kb=32
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiple.enabled=false
 
+ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 
 # Bluetooth
