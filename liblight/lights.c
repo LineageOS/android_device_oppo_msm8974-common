@@ -73,23 +73,14 @@ const char *const LED_PWM_FILE
 char const *const LED_BLINK_FILE
         = "/sys/class/leds/red/device/blink";
 
-char const *const LED_DT_RED_BRIGHTNESS
-        = "/sys/class/leds/led:rgb_red/brightness";
-
-char const *const LED_DT_GREEN_BRIGHTNESS
-        = "/sys/class/leds/led:rgb_green/brightness";
-
-char const *const LED_DT_BLUE_BRIGHTNESS
-        = "/sys/class/leds/led:rgb_blue/brightness";
-
 char const *const LED_DT_RAMP_STEP_FILE
-        = "/sys/class/leds/led:rgb_red/ramp_step_ms";
+        = "/sys/class/leds/red/ramp_step_ms";
 
 char const *const LED_DT_DUTY_FILE
-        = "/sys/class/leds/led:rgb_red/duty_pcts";
+        = "/sys/class/leds/red/duty_pcts";
 
 char const *const LED_DT_BLINK_FILE
-        = "/sys/class/leds/led:rgb_red/blink";
+        = "/sys/class/leds/red/blink";
 
 // Number of steps to use in the duty array
 #define LED_DT_DUTY_STEPS       50
@@ -237,7 +228,7 @@ set_speaker_light_locked_dt(struct light_device_t *dev __unused,
 
     if (state == NULL) {
         write_int(LED_DT_BLINK_FILE, 0);
-        write_int(LED_DT_RED_BRIGHTNESS, 0);
+        write_int(RED_LED_FILE, 0);
         return 0;
     }
 
@@ -281,7 +272,7 @@ set_speaker_light_locked_dt(struct light_device_t *dev __unused,
         write_string(LED_DT_DUTY_FILE, dutystr);
         write_int(LED_DT_BLINK_FILE, 1);
     } else {
-        write_int(LED_DT_RED_BRIGHTNESS, colorRGB ? 255 : 0);
+        write_int(RED_LED_FILE, colorRGB ? 255 : 0);
     }
 
     return 0;
