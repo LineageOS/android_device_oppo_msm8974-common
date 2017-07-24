@@ -41,6 +41,13 @@ write_headers "find7 find7s n3"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
+# Blobs for TWRP data decryption
+cat << EOF >> "$BOARDMK"
+ifeq (\$(WITH_TWRP),true)
+TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE_COMMON/proprietary
+endif
+EOF
+
 write_footers
 
 if [ "$DEVICE" == "find7-common" ]; then
