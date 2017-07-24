@@ -57,6 +57,11 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
+extract "$MY_DIR"/proprietary-files-twrp.txt "$SRC" "$SECTION"
+
+TWRP_QSEECOMD="$CM_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary/recovery/root/sbin/qseecomd
+
+sed -i "s|/system/bin/linker|/sbin/linker\x0\x0\x0\x0\x0\x0|g" "$TWRP_QSEECOMD"
 
 # Reinitialize the helper for device
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" false "$CLEAN_VENDOR"
