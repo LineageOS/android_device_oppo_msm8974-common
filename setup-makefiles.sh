@@ -60,5 +60,12 @@ fi
 write_makefiles "$MY_DIR"/device-proprietary-files.txt
 write_makefiles "$MY_DIR"/../$DEVICE/device-proprietary-files.txt
 
+# Blobs for TWRP data decryption
+cat << EOF >> "$BOARDMK"
+ifeq (\$(WITH_TWRP),true)
+TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE_COMMON/proprietary
+endif
+EOF
+
 # Finish
 write_footers
