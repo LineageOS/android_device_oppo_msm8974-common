@@ -24,9 +24,9 @@ INITIAL_COPYRIGHT_YEAR=2014
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+LINEAGE_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -34,7 +34,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and common guards
 write_headers "find7 find7s n3"
@@ -52,13 +52,13 @@ write_footers
 
 if [ "$DEVICE" == "find7-common" ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" true
+    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true
 
     # Copyright headers and guards
     write_headers "find7 find7s"
 else
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
     # Copyright headers and guards
     write_headers
