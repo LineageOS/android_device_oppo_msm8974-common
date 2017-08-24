@@ -35,6 +35,9 @@ media.aac_51_output_enabled=true
 
 persist.media.treble_omx=false
 
+# Navigation bar
+qemu.hw.mainkeys=0
+
 # Network
 persist.data.netmgrd.qos.enable=true
 persist.data.tcpackprio.enable=true
