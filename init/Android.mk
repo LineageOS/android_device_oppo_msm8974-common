@@ -9,7 +9,7 @@ LOCAL_C_INCLUDES := \
     external/selinux/libselinux/include \
     external/libcap/libcap/include
 LOCAL_CFLAGS := -Wall
-LOCAL_STATIC_LIBRARIES := libbase
+LOCAL_STATIC_LIBRARIES := libbase libinit
 LOCAL_SRC_FILES := init_msm8974.cpp
 ifneq ($(TARGET_LIBINIT_MSM8974_DEFINES_FILE),)
   LOCAL_SRC_FILES += ../../../../$(TARGET_LIBINIT_MSM8974_DEFINES_FILE)
