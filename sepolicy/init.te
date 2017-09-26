@@ -1,2 +1,5 @@
 # Allow init to write in debugfs
 allow init debugfs:file write;
+
+# required for LD_SHIM_LIBS
+allow init { domain -lmkd -crash_dump }:process noatsecure;
