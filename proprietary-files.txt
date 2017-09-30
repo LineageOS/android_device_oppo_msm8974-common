@@ -1,8 +1,3 @@
-# Bluetooth
-bin/btnvtool
-bin/hci_qcomm_init
-vendor/lib/libbtnv.so
-
 # ADSP
 bin/adsprpcd
 vendor/lib/libadsprpc.so
@@ -18,12 +13,17 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
+# Bluetooth
+bin/btnvtool
+bin/hci_qcomm_init
+vendor/lib/libbtnv.so
+
 # DRM
 bin/qseecomd
 lib/libdrmdecrypt.so
+vendor/lib/libQSEEComAPI.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
-vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
@@ -64,26 +64,26 @@ etc/firmware/a330_pm4.fw
 
 # Perf
 bin/mpdecision
-vendor/lib/libqti-perfd-client.so
 vendor/lib/libqc-opt.so
+vendor/lib/libqti-perfd-client.so
 
 # Qualcomm framework
 bin/irsc_util
--vendor/lib/libdiag.so
+vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
--vendor/lib/libdsutils.so
--vendor/lib/libidl.so
--vendor/lib/libqcci_legacy.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
--vendor/lib/libqmi.so
+vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
--vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
--vendor/lib/libqmiservices.so
+vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 vendor/lib/libsystem_health_mon.so
 
@@ -101,7 +101,7 @@ etc/permissions/qcrilhook.xml
 framework/qcnvitems.jar
 framework/qcrilhook.jar
 framework/qti-telephony-common.jar
--lib/libmdmdetect.so
+lib/libmdmdetect.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
@@ -125,10 +125,10 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
-bin/time_daemon
--vendor/lib/libtime_genoff.so
--vendor/lib/libTimeService.so
 -app/TimeService/TimeService.apk
+bin/time_daemon
+vendor/lib/libTimeService.so
+-vendor/lib/libtime_genoff.so
 
 # Venus (media) firmware
 etc/firmware/venus.b00
@@ -140,10 +140,10 @@ etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
 # Widevine - from kipper
-vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
 vendor/lib/libWVStreamControlAPI_L3.so|61673304827483d44b735a3dd08f0783d10ce92d
+vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
 vendor/lib/mediadrm/libwvdrmengine.so|416e44ba482f1f97258ff8793b0a810219ac632d
 
 # WiFi
--lib/libwpa_qmi_eap_proxy.so
 lib/libwcnss_qmi.so
+-lib/libwpa_qmi_eap_proxy.so
