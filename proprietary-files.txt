@@ -62,6 +62,13 @@ vendor/lib/libuiblur.so
 etc/firmware/a330_pfp.fw
 etc/firmware/a330_pm4.fw
 
+# Media
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAmrwbplusDec.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxWmaDec.so
+
 # Perf
 bin/mpdecision
 vendor/lib/libqc-opt.so
