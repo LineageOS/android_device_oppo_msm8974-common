@@ -37,7 +37,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 # Copyright headers and common guards
-write_headers "find7 find7s n3"
+write_headers "find7 n3"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
@@ -50,19 +50,11 @@ EOF
 
 write_footers
 
-if [ "$DEVICE" == "find7-common" ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" true
+# Reinitialize the helper for device
+setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
-    # Copyright headers and guards
-    write_headers "find7 find7s"
-else
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
-
-    # Copyright headers and guards
-    write_headers
-fi
+# Copyright headers and guards
+write_headers
 
 write_makefiles "$MY_DIR"/device-proprietary-files.txt
 write_makefiles "$MY_DIR"/../$DEVICE/device-proprietary-files.txt
