@@ -14,7 +14,7 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_MODULE := libshim_camera
 LOCAL_MODULE_TAGS := optional
-LOCAL_MULTILIB := 32
+LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -24,9 +24,7 @@ LOCAL_SRC_FILES := \
     CameraParameters.cpp
 
 LOCAL_MODULE := libshim_camera_parameters
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
-
-LOCAL_32_BIT_ONLY := true
+LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
