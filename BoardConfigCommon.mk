@@ -117,6 +117,7 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_RIL_VARIANT := caf
 
 # SELinux
+include device/lineage/sepolicy/qcom/sepolicy.mk
 include device/qcom/sepolicy/legacy-sepolicy.mk
 include device/qcom/sepolicy/sepolicy.mk
 
