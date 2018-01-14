@@ -31,6 +31,9 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
+DEVICE_VENDOR=$VENDOR
+VENDOR_COMMON=oppo
+
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
@@ -53,19 +56,19 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
+setup_vendor "$DEVICE_COMMON" "$VENDOR_COMMON" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files-twrp.txt "$SRC" "$SECTION"
 
-TWRP_QSEECOMD="$CM_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary/recovery/root/sbin/qseecomd
+TWRP_QSEECOMD="$CM_ROOT"/vendor/"$VENDOR_COMMON"/"$DEVICE_COMMON"/proprietary/recovery/root/sbin/qseecomd
 
 sed -i "s|/system/bin/linker|/sbin/linker\x0\x0\x0\x0\x0\x0|g" "$TWRP_QSEECOMD"
 
 # Reinitialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "$DEVICE" "$DEVICE_VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/device-proprietary-files.txt "$SRC" "$SECTION"
-extract "$MY_DIR"/../$DEVICE/device-proprietary-files.txt "$SRC" "$SECTION"
+extract "$MY_DIR"/../../$DEVICE_VENDOR/$DEVICE/device-proprietary-files.txt "$SRC" "$SECTION"
 
 "$MY_DIR"/setup-makefiles.sh
