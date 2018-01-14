@@ -33,31 +33,34 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
+DEVICE_VENDOR=$VENDOR
+VENDOR_COMMON=oppo
+
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR_COMMON" "$LINEAGE_ROOT" true
 
 # Copyright headers and common guards
-write_headers "find7 n3"
+write_headers "bacon find7 n3"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
 # Blobs for TWRP data decryption
 cat << EOF >> "$BOARDMK"
 ifeq (\$(WITH_TWRP),true)
-TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE_COMMON/proprietary
+TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR_COMMON/$DEVICE_COMMON/proprietary
 endif
 EOF
 
 write_footers
 
 # Reinitialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+setup_vendor "$DEVICE" "$DEVICE_VENDOR" "$LINEAGE_ROOT"
 
 # Copyright headers and guards
 write_headers
 
 write_makefiles "$MY_DIR"/device-proprietary-files.txt
-write_makefiles "$MY_DIR"/../$DEVICE/device-proprietary-files.txt
+write_makefiles "$MY_DIR"/../../$DEVICE_VENDOR/$DEVICE/device-proprietary-files.txt
 
 # Finish
 write_footers
