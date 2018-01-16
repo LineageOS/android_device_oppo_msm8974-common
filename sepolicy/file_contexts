@@ -8,3 +8,6 @@
 # Old camera socket
 /data/cam_socket1                                       u:object_r:camera_socket:s0
 /data/cam_socket2                                       u:object_r:camera_socket:s0
+
+# HALs
+/system/vendor/bin/hw/android\.hardware\.usb@1\.0-service\.oppo-msm8974         u:object_r:hal_usb_default_exec:s0
