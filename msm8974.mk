@@ -209,7 +209,7 @@ PRODUCT_COPY_FILES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.msm8974
+    android.hardware.usb@1.0-service.oppo-msm8974
 
 # Vibrator
 PRODUCT_PACKAGES += \
