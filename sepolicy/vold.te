@@ -1,1 +1,3 @@
 allow vold persist_file:dir r_file_perms;
+
+dontaudit vold proc_touchpanel:dir read;
