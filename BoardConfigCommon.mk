@@ -65,6 +65,7 @@ TARGET_USES_64_BIT_BINDER := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Camera
+TARGET_LD_SHIM_LIBS := /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 
