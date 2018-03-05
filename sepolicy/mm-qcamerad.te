@@ -1,0 +1,1 @@
+allow mm-qcamerad { untrusted_app priv_app }:fd use;
