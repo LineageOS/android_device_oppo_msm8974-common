@@ -15,6 +15,10 @@ ifeq ($(call is-board-platform-in-list, msm8974 msm8226 msm8610),true)
     LOCAL_CFLAGS += -DVENUS_PRESENT
 endif
 
+ifeq ($(TARGET_DEVICE), find7)
+    LOCAL_CFLAGS += -DFLIP_BACK_SENSOR_MOUNT_ANGLE
+endif
+
 LOCAL_CFLAGS += -D_ANDROID_
 
 LOCAL_COPY_HEADERS_TO := mm-camera-interface

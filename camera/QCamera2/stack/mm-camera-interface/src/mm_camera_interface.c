@@ -1240,6 +1240,11 @@ void get_sensor_info()
                 temp = entity.flags >> 8;
                 mount_angle = (temp & 0xFF) * 90;
                 facing = (temp >> 8);
+#ifdef FLIP_BACK_SENSOR_MOUNT_ANGLE
+                if (facing == 0) {
+                    mount_angle += 180;
+                }
+#endif
                 ALOGD("index = %d flag = %x mount_angle = %d facing = %d\n"
                     , num_cameras, (unsigned int)temp, (unsigned int)mount_angle,
                     (unsigned int)facing);
