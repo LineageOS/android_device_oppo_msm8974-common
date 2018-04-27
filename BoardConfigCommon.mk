@@ -73,7 +73,6 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 BUILD_BROKEN_DUP_RULES := true
 
 # Camera
-TARGET_USES_MEDIA_EXTENSIONS := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/vendor/bin/mm-qcamera-daemon=23
 
