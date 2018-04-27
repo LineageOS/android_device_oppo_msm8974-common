@@ -34,13 +34,8 @@
 #include "QCameraStream.h"
 
 // Media dependencies
-#ifdef USE_MEDIA_EXTENSIONS
 #include <media/hardware/HardwareAPI.h>
 typedef struct VideoNativeHandleMetadata media_metadata_buffer;
-#else
-#include "QComOMXMetadata.h"
-typedef struct encoder_media_buffer_type media_metadata_buffer;
-#endif
 
 
 #define CAMERA_MIN_ALLOCATED_BUFFERS     3
