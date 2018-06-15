@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ad9e2ec_b82bcc6e",
+        "filename": "overlay-lineage/lineage-sdk/lineage/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-15T14:03:11Z",
+      "side": 1,
+      "message": "The LineageOS Project",
+      "range": {
+        "startLine": 3,
+        "startChar": 24,
+        "endLine": 3,
+        "endChar": 33
+      },
+      "revId": "2741557d7841adfe20e54727e7443db28750bf90",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
