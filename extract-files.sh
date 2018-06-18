@@ -61,7 +61,7 @@ setup_vendor "$DEVICE_COMMON" "$VENDOR_COMMON" "$LINEAGE_ROOT" true "$CLEAN_VEND
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files-twrp.txt "$SRC" "$SECTION"
 
-TWRP_QSEECOMD="$CM_ROOT"/vendor/"$VENDOR_COMMON"/"$DEVICE_COMMON"/proprietary/recovery/root/sbin/qseecomd
+TWRP_QSEECOMD="$LINEAGE_ROOT"/vendor/"$VENDOR_COMMON"/"$DEVICE_COMMON"/proprietary/recovery/root/sbin/qseecomd
 
 sed -i "s|/system/bin/linker|/sbin/linker\x0\x0\x0\x0\x0\x0|g" "$TWRP_QSEECOMD"
 
