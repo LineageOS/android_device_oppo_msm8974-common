@@ -102,7 +102,7 @@ on boot
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
     # Touchscreen
-    chown system radio /proc/touchpanel/double_tap_enable
+    chown system system /proc/touchpanel/double_tap_enable
     chmod 0660 /proc/touchpanel/double_tap_enable
 
 on post-fs-data
