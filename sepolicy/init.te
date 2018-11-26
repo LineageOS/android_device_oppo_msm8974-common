@@ -1,0 +1,5 @@
+# Allow chown'ing LED files
+allow init sysfs:file setattr;
+allow init sysfs_graphics:file setattr;
+allow init sysfs_leds:file setattr;
+allow init sysfs_leds:lnk_file read;
