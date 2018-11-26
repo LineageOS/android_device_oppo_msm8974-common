@@ -1,0 +1,2 @@
+# Allow chown'ing LED files
+allow init sysfs_leds:lnk_file read;
