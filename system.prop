@@ -64,6 +64,9 @@ ro.use_data_netmgrd=true
 
 telephony.lteOnGsmDevice=1
 
+# Surfaceflinger
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # Time services
 persist.timed.enable=true
 
