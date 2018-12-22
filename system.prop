@@ -42,6 +42,9 @@ ro.opengles.version=196608
 mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
 
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
+
 # Network
 persist.data.netmgrd.qos.enable=true
 persist.data.tcpackprio.enable=true
