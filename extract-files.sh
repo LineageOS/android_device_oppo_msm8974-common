@@ -62,8 +62,10 @@ extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files-twrp.txt "$SRC" "$SECTION"
 
 TWRP_QSEECOMD="$LINEAGE_ROOT"/vendor/"$VENDOR_COMMON"/"$DEVICE_COMMON"/proprietary/recovery/root/sbin/qseecomd
+TWRP_KEYMASTER="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary/recovery/root/sbin/hw/android.hardware.keymaster@3.0-service
 
 sed -i "s|/system/bin/linker|/sbin/linker\x0\x0\x0\x0\x0\x0|g" "$TWRP_QSEECOMD"
+sed -i "s|/system/bin/linker|/sbin/linker\x0\x0\x0\x0\x0\x0|g" "$TWRP_KEYMASTER"
 
 # Reinitialize the helper for device
 setup_vendor "$DEVICE" "$DEVICE_VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
