@@ -1,2 +1,24 @@
 # Allow init to write in debugfs
 allow init debugfs:file write;
+
+allow init {
+    sysfs_kgsl
+    sysfs_leds
+}:lnk_file read;
+
+allow init {
+    sysfs_cpu_boost
+    sysfs_devfreq
+    sysfs_devices_system_cpu
+    sysfs_kgsl
+    sysfs_msm_perf
+    sysfs_msm_power
+    sysfs_ssr_toggle
+    sysfs_thermal
+}:file w_file_perms;
+
+allow init {
+    sysfs_graphics
+    sysfs_leds
+    sysfs_wlan_fwpath
+}:file setattr;
