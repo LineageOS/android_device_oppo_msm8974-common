@@ -1,2 +1,12 @@
 # Allow init to write in debugfs
 allow init debugfs:file write;
+
+allow init {
+    sysfs_msm_power
+    sysfs_ssr_toggle
+}:file w_file_perms;
+
+allow init {
+    sysfs_graphics
+    sysfs_wlan_fwpath
+}:file setattr;
