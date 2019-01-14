@@ -74,16 +74,6 @@ on boot
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
     mkdir /persist/alarm 0770 system system
 
-    # charger
-    chown root system /sys/module/qpnp_charger/parameters/charger_monitor
-    chown root system /sys/class/power_supply/battery/input_current_max
-    chown root system /sys/class/power_supply/battery/input_current_trim
-    chown root system /sys/class/power_supply/battery/voltage_min
-    chmod 0644 /sys/module/qpnp_charger/parameters/charger_monitor
-    chmod 0644 /sys/class/power_supply/battery/input_current_max
-    chmod 0644 /sys/class/power_supply/battery/input_current_trim
-    chmod 0644 /sys/class/power_supply/battery/voltage_min
-
     # Camera Recording
     mkdir /dev/video
     symlink /dev/video32 /dev/video/venus_dec
