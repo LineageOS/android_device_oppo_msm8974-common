@@ -16,6 +16,24 @@
       "revId": "f55a7da76ab015910e49997da8b12a2a46b4280f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a0181f75_5dcaa879",
+        "filename": "manifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2019-01-18T14:15:28Z",
+      "side": 1,
+      "message": "Because that\u0027s how it is named. adb shell lshal --init-vintf",
+      "parentUuid": "ed282d5f_959589e0",
+      "revId": "f55a7da76ab015910e49997da8b12a2a46b4280f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
