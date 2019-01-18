@@ -16,6 +16,24 @@
       "revId": "afdc9caf977e94c294ac7550d1f26ba11379d15a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "465b4ae2_81bf3fce",
+        "filename": "rootdir/etc/init.qcom-common.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2019-01-18T14:14:31Z",
+      "side": 0,
+      "message": "It\u0027s nowhere, we don\u0027t need it for anything",
+      "parentUuid": "99ea5064_464551e8",
+      "revId": "afdc9caf977e94c294ac7550d1f26ba11379d15a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
