@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "99ea5064_464551e8",
+        "filename": "rootdir/etc/init.qcom-common.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2019-01-18T10:41:55Z",
+      "side": 0,
+      "message": "Are you sure, this is there in init.rc?",
+      "revId": "afdc9caf977e94c294ac7550d1f26ba11379d15a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
