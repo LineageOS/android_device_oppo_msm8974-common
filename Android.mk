@@ -22,17 +22,6 @@ ifneq ($(filter bacon find7 n3,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-include $(CLEAR_VARS)
-
-WCNSS_CONFIG_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-$(WCNSS_CONFIG_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "WCNSS config link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /data/vendor/wifi/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_CONFIG_SYMLINK)
-
 endif
 endif
 endif
