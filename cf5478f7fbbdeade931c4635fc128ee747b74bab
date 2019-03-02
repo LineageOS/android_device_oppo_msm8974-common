@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b9cdf868_e6a8b060",
+        "filename": "msm8974.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 19837
+      },
+      "writtenOn": "2019-03-02T10:02:51Z",
+      "side": 1,
+      "message": "you have two slashes here",
+      "range": {
+        "startLine": 244,
+        "startChar": 87,
+        "endLine": 244,
+        "endChar": 89
+      },
+      "revId": "cf5478f7fbbdeade931c4635fc128ee747b74bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
