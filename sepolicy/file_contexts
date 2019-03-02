@@ -1,6 +1,8 @@
 # Lights
 /sys/devices/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/leds(/.*)?                    u:object_r:sysfs_leds:s0
 /sys/devices/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/blink                         u:object_r:sysfs_leds:s0
+/sys/devices/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grpfreq                       u:object_r:sysfs_leds:s0
+/sys/devices/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grppwm                        u:object_r:sysfs_leds:s0
 
 # NV backup partitions
 /dev/block/platform/msm_sdcc\.1/by-name/oppodycnvbk                                 u:object_r:nvbackup_block_device:s0
