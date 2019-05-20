@@ -40,6 +40,7 @@ persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196608
 
 # Media
+debug.stagefright.ccodec=0
 mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
 
