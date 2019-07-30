@@ -217,6 +217,8 @@ service vendor.qseecomd /system/vendor/bin/qseecomd
 
 service charger /system/bin/charger
     class charger
+    user system
+    group system graphics input
     critical
     capabilities SYS_BOOT
     seclabel u:r:healthd:s0
