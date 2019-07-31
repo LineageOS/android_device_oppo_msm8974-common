@@ -37,6 +37,8 @@ TARGET_CPU_VARIANT := krait
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
+WITH_DEXPREOPT := false
+
 # Kernel
 BOARD_DTBTOOL_ARGS := --force-v2
 BOARD_KERNEL_BASE := 0x00000000
@@ -84,6 +86,7 @@ TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 
 # Exclude serif fonts for saving system.img size.
 EXCLUDE_SERIF_FONTS := true
+MINIMAL_FONT_FOOTPRINT := true
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
