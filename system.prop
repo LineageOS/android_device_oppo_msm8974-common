@@ -16,7 +16,6 @@ ro.config.vc_call_vol_steps=7
 
 # Bluetooth
 vendor.qcom.bluetooth.soc=pronto
-ro.bluetooth.hfp.ver=1.7
 ro.qualcomm.bt.hci_transport=smd
 
 ro.bluetooth.dun=false
