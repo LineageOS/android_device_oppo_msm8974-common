@@ -125,9 +125,6 @@ TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
-# Radio
-TARGET_RIL_VARIANT := caf
-
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 
