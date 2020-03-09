@@ -17,6 +17,8 @@
 # inherit from OPPO common
 -include device/oppo/common/BoardConfigCommon.mk
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 PLATFORM_PATH := device/oppo/msm8974-common
 
 # Bootloader
