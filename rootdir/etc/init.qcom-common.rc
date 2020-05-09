@@ -208,7 +208,7 @@ service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     group gps inet net_raw diag oem_2950 net_admin wifi
 
-service qseecomd /system/vendor/bin/qseecomd
+service vendor.qseecomd /system/vendor/bin/qseecomd
     class core
     user root
     group root
