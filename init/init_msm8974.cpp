@@ -39,6 +39,10 @@
 #include <android-base/strings.h>
 #include <android-base/properties.h>
 
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
+#include <init/DeviceLibinit.h>
+
 #include "vendor_init.h"
 #include "property_service.h"
 
@@ -89,4 +93,6 @@ void vendor_load_properties()
     property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
     init_target_properties();
     init_alarm_boot_properties();
+
+    vendor_load_device_properties();
 }
