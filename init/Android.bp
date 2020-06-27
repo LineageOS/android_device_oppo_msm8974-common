@@ -14,15 +14,19 @@
 // limitations under the License.
 //
 
-cc_library_static {
+oppo_msm8974_init_library_static {
     name: "libinit_msm8974",
     recovery_available: true,
-    srcs: ["init_msm8974.cpp"],
+    srcs: [
+        "init_msm8974.cpp",
+        "DeviceLibinit.cpp"
+    ],
     include_dirs: [
         "system/core/base/include",
         "system/core/init",
         "external/selinux/libselinux/include",
-        "external/libcap/libcap/include"
+        "external/libcap/libcap/include",
+        "device/oppo/msm8974-common"
     ],
     cflags: [
         "-Wall",
