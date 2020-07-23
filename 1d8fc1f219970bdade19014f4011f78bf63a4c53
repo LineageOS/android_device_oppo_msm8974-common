@@ -22,6 +22,30 @@
       "revId": "1d8fc1f219970bdade19014f4011f78bf63a4c53",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f26d6752_c77d133a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2020-07-23T02:01:41Z",
+      "side": 1,
+      "message": "Moving properties to a new location, and removing a property are two different actions?",
+      "parentUuid": "166a550d_ac332fff",
+      "range": {
+        "startLine": 14,
+        "startChar": 2,
+        "endLine": 14,
+        "endChar": 14
+      },
+      "revId": "1d8fc1f219970bdade19014f4011f78bf63a4c53",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
