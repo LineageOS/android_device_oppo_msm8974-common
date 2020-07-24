@@ -64,8 +64,6 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     Snap
 
-PRODUCT_COPY_FILES += \
-
 # Charger
 WITH_LINEAGE_CHARGER := false
 PRODUCT_PACKAGES += \
