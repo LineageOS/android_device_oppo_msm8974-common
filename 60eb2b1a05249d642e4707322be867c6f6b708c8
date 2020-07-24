@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cabb166c_1a1ca41a",
+        "filename": "msm8974.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 26029
+      },
+      "writtenOn": "2020-07-24T11:02:01Z",
+      "side": 0,
+      "message": "You forgot to remove this line",
+      "revId": "60eb2b1a05249d642e4707322be867c6f6b708c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
