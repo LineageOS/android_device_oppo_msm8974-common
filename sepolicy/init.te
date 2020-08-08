@@ -1,0 +1,2 @@
+allow init sysfs_leds:file r_file_perms;
+allow init sysfs_leds:lnk_file r_file_perms;
