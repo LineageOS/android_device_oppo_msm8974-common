@@ -44,14 +44,12 @@
 #include <init/DeviceLibinit.h>
 
 #include "vendor_init.h"
-#include "property_service.h"
 
 #include "init_msm8974.h"
 
 using android::base::Trim;
 using android::base::GetProperty;
 using android::base::ReadFileToString;
-using android::init::property_set;
 
 __attribute__ ((weak))
 void init_target_properties()
@@ -81,16 +79,16 @@ static void init_alarm_boot_properties()
          * 8 -> KPDPWR_N pin toggled (power key pressed)
          */
         if (Trim(boot_reason) == "3" || tmp == "true")
-            property_set("ro.alarm_boot", "true");
+            property_override("ro.alarm_boot", "true");
         else
-            property_set("ro.alarm_boot", "false");
+            property_override("ro.alarm_boot", "false");
     }
 }
 
 void vendor_load_properties()
 {
     // Init a dummy BT MAC address, will be overwritten later
-    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
+    property_override("ro.boot.btmacaddr", "00:00:00:00:00:00");
     init_target_properties();
     init_alarm_boot_properties();
 
