@@ -121,6 +121,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8974
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Legacy memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
