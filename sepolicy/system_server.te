@@ -1,2 +1,5 @@
 # examine battery state
 r_dir_file(system_server, sysfs_usb_supply);
+
+get_prop(system_server, userspace_reboot_config_prop);
+get_prop(system_server, userspace_reboot_exported_prop);
