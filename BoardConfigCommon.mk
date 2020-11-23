@@ -133,9 +133,10 @@ TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 BOARD_USES_QCOM_HARDWARE := true
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
+#include device/qcom/sepolicy-legacy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/temp
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
