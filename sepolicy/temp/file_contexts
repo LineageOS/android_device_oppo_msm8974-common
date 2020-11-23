@@ -1,0 +1,3 @@
+/bt_firmware(/.*)?         u:object_r:temp_root_mount_file:s0
+/firmware(/.*)?            u:object_r:temp_root_mount_file:s0
+/tombstones(/.*)?          u:object_r:temp_root_mount_file:s0
