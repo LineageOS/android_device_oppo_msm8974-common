@@ -17,6 +17,8 @@
 # inherit from OPPO common
 -include device/oppo/common/BoardConfigCommon.mk
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 PLATFORM_PATH := device/oppo/msm8974-common
 
 # Bootloader
@@ -133,9 +135,10 @@ TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 BOARD_USES_QCOM_HARDWARE := true
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
+#include device/qcom/sepolicy-legacy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/temp
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
