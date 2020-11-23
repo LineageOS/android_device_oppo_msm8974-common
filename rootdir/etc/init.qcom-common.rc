@@ -245,7 +245,6 @@ service hciattach /system/vendor/bin/init.qcom.bt.sh
     user bluetooth
     group bluetooth net_bt_admin oem_2950 diag radio
     disabled
-    seclabel u:r:bluetooth_loader:s0
     oneshot
 
 on property:vendor.bluetooth.hciattach=true
