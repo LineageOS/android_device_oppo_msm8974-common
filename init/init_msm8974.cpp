@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
+                 2020, The LineageOS Project
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -41,20 +42,13 @@
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
-#include <init/DeviceLibinit.h>
 
+#include "DeviceLibinit.h"
 #include "vendor_init.h"
-
-#include "init_msm8974.h"
 
 using android::base::Trim;
 using android::base::GetProperty;
 using android::base::ReadFileToString;
-
-__attribute__ ((weak))
-void init_target_properties()
-{
-}
 
 void property_override(char const prop[], char const value[], bool add = true)
 {
@@ -100,7 +94,6 @@ void vendor_load_properties()
 {
     // Init a dummy BT MAC address, will be overwritten later
     property_override("ro.boot.btmacaddr", "00:00:00:00:00:00");
-    init_target_properties();
     init_alarm_boot_properties();
 
     vendor_load_device_properties();
