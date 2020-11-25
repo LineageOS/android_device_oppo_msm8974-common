@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
+                 2020, The LineageOS Project
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -27,9 +28,7 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef __INIT_MSM8974__H__
-#define __INIT_MSM8974__H__
+#pragma once
 
 void init_target_properties();
-
-#endif /* __INIT_MSM8974__H__ */
+void property_override(char const prop[], char const value[], bool add = true);
