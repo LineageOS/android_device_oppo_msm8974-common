@@ -22,11 +22,11 @@ oppo_msm8974_init_library_static {
         "DeviceLibinit.cpp"
     ],
     include_dirs: [
+        "device/oppo/msm8974-common/init",
         "system/core/base/include",
         "system/core/init",
         "external/selinux/libselinux/include",
         "external/libcap/libcap/include",
-        "device/oppo/msm8974-common"
     ],
     cflags: [
         "-Wall",

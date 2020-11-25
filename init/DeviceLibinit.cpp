@@ -15,7 +15,7 @@
  */
 
 #ifndef TARGET_PROVIDES_DEVICE_LIBINIT
-#include <init/DeviceLibinit.h>
+#include "DeviceLibinit.h"
 
 void vendor_load_device_properties() { }
 #endif

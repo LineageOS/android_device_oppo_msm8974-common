@@ -16,9 +16,6 @@
 
 #include <stdint.h>
 
-#ifndef __DEVICE_LIBINIT__H__
-#define __DEVICE_LIBINIT__H__
+#pragma once
 
 void vendor_load_device_properties();
-
-#endif /* __DEVICE_LIBINIT__H__ */
