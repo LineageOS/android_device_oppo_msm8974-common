@@ -129,9 +129,6 @@ on post-fs-data
     mkdir /data/misc/location/mq 0770 gps gps
     mkdir /data/misc/location/xtwifi 0770 gps gps
 
-    # Create /data/time folder for time-services
-    mkdir /data/time 0700 system system
-
     setprop vold.post_fs_data_done 1
 
     # Create PERFD deamon related dirs
@@ -246,11 +243,6 @@ service thermal-engine /system/vendor/bin/thermal-engine
     socket thermal-send-client stream 0666 system system
     socket thermal-recv-client stream 0660 system system
     socket thermal-recv-passive-client stream 0666 system system
-
-service time_daemon /system/vendor/bin/time_daemon
-    class late_start
-    user root
-    group root
 
 on property:vold.decrypt=trigger_restart_framework
     start wcnss-service
