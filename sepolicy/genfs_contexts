@@ -1,1 +1,2 @@
-genfscon proc /touchpanel   u:object_r:proc_touchpanel:s0
+genfscon proc  /touchpanel                            u:object_r:proc_touchpanel:s0
+genfscon sysfs /devices/soc.0/qpnp-rtc-8/             u:object_r:sysfs_rtc:s0
