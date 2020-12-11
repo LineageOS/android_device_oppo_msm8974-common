@@ -39,6 +39,24 @@
       "revId": "7ccb95b4a5728f5a94e5e1a5f6db954cf2287d68",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b110c50_19971bbe",
+        "filename": "sepolicy/genfs_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 14010
+      },
+      "writtenOn": "2020-12-11T17:51:39Z",
+      "side": 1,
+      "message": "Nope,that\u0027s the message of the original author of the commit. The correct path on bacon is qpnp-rtc-17 (without the /soc.0/ folder, which does not exist.",
+      "parentUuid": "c6b30bc4_6f842a55",
+      "revId": "7ccb95b4a5728f5a94e5e1a5f6db954cf2287d68",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
