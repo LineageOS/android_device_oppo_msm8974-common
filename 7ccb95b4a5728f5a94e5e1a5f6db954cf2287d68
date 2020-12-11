@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "e044c7d1_d0772983",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2020-12-11T18:40:00Z",
+      "side": 1,
+      "message": "yeah, if anything, a signed-off footer",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 35
+      },
+      "revId": "7ccb95b4a5728f5a94e5e1a5f6db954cf2287d68",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c6b30bc4_6f842a55",
         "filename": "sepolicy/genfs_contexts",
         "patchSetId": 2
