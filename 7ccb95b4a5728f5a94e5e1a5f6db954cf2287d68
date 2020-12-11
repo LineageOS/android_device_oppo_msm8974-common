@@ -22,6 +22,23 @@
       "revId": "7ccb95b4a5728f5a94e5e1a5f6db954cf2287d68",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c6b30bc4_6f842a55",
+        "filename": "sepolicy/genfs_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 16908
+      },
+      "writtenOn": "2020-12-11T17:47:13Z",
+      "side": 1,
+      "message": "Isn\u0027t it qpnp-rtc-4? According to your selinux message: https://review.lineageos.org/c/LineageOS/android_device_oppo_msm8974-common/+/295241/2",
+      "revId": "7ccb95b4a5728f5a94e5e1a5f6db954cf2287d68",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
