@@ -119,9 +119,6 @@ TARGET_HAS_MEMFD_BACKPORT := true
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
-# Properties
-TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
-
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
