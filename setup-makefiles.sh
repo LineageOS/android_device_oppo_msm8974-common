@@ -44,13 +44,6 @@ write_headers "bacon find7 n3"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
-# Blobs for TWRP data decryption
-cat << EOF >> "$BOARDMK"
-ifeq (\$(WITH_TWRP),true)
-TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR_COMMON/$DEVICE_COMMON/proprietary
-endif
-EOF
-
 write_footers
 
 # Reinitialize the helper for device
