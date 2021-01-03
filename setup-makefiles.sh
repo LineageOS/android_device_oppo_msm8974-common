@@ -40,9 +40,6 @@ if [ -s "${MY_DIR}/../../${VENDOR_DEVICE}/${DEVICE}/proprietary-files.txt" ]; th
     # Warning headers and guards
     write_headers
 
-    # Our list of necessary device blobs
-    write_makefiles "${MY_DIR}/device-proprietary-files.txt" true
-
     # The standard device blobs
     write_makefiles "${MY_DIR}/../../${VENDOR_DEVICE}/${DEVICE}/proprietary-files.txt" true
 

@@ -70,7 +70,6 @@ if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR_DEVICE}/${DEVICE}/p
     source "${MY_DIR}/../../${VENDOR_DEVICE}/${DEVICE}/extract-files.sh"
     setup_vendor "${DEVICE}" "${VENDOR_DEVICE}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-    extract "${MY_DIR}/device-proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
     extract "${MY_DIR}/../../${VENDOR_DEVICE}/${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
