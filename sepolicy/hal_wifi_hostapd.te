@@ -1,0 +1,2 @@
+allow hal_wifi_hostapd_default sysfs_net:lnk_file read;
+
