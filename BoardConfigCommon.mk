@@ -118,6 +118,12 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
 
+# ODM Manifests
+ODM_MANIFEST_SKUS := jdi sharp truly
+ODM_MANIFEST_JDI_FILES := $(PLATFORM_PATH)/odm_manifest_jdi.xml
+ODM_MANIFEST_SHARP_FILES := $(PLATFORM_PATH)/odm_manifest_sharp.xml
+ODM_MANIFEST_TRULY_FILES := $(PLATFORM_PATH)/odm_manifest_truly.xml
+
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 

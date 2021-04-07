@@ -98,3 +98,30 @@ void vendor_load_properties()
 
     vendor_load_device_properties();
 }
+
+void import_kernel_cmdline(bool in_qemu,
+                           const std::function<void(const std::string&, const std::string&, bool)>& fn) {
+    std::string cmdline;
+    android::base::ReadFileToString("/proc/cmdline", &cmdline);
+
+    for (const auto& entry : android::base::Split(android::base::Trim(cmdline), " ")) {
+        std::vector<std::string> pieces = android::base::Split(entry, "=");
+        if (pieces.size() == 2) {
+            fn(pieces[0], pieces[1], in_qemu);
+        }
+    }
+}
+
+void vendor_set_sku()
+{
+    import_kernel_cmdline(false,
+                          [&](const std::string& key, const std::string& value, bool in_qemu) {
+                              if (key == "mdss_mdp.panel" && value == "1:dsi:0:qcom,mdss_dsi_jdi_1080p_cmd") {
+                                property_override("ro.hardware.sku", "jdi");
+                              } else if (key == "mdss_mdp.panel" && value == "1:dsi:0:qcom,mdss_dsi_sharp_1080p_cmd") {
+                                property_override("ro.hardware.sku", "sharp");
+                              } else if (key == "mdss_mdp.panel" && value == "1:dsi:0:qcom,mdss_dsi_truly_1080p_cmd") {
+                                property_override("ro.hardware.sku", "truly");
+                              }
+                          });
+}
