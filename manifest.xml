@@ -198,10 +198,6 @@
             <instance>default</instance>
         </interface>
         <interface>
-            <name>IColorEnhancement</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
             <name>IDisplayColorCalibration</name>
             <instance>default</instance>
         </interface>
