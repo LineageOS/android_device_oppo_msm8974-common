@@ -149,6 +149,8 @@ on fs
 
     restorecon_recursive /persist
 
+    mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
+
 service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
