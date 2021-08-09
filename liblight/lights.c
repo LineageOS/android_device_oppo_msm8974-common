@@ -156,7 +156,6 @@ static int
 set_speaker_light_locked_drv(struct light_device_t *dev __unused,
         struct light_state_t const *state)
 {
-    int len;
     int blink, freq, pwm;
     int onMS, offMS;
     unsigned int colorRGB;
@@ -223,7 +222,6 @@ static int
 set_speaker_light_locked_dt(struct light_device_t *dev __unused,
         struct light_state_t const *state)
 {
-    int len;
     int onMS, offMS;
     unsigned int brightness;
     unsigned int colorRGB;
