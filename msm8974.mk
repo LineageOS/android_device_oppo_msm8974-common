@@ -70,6 +70,7 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
+WITH_LINEAGE_CHARGER := false
 
 # CryptfsHW
 PRODUCT_PACKAGES += \
