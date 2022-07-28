@@ -16,6 +16,23 @@
       "message": "This topic (most likely this patch) apparently breaks microphone on Signal video calls. We shall probably hold it until I address this new issue. It shouldn\u0027t take too long.",
       "revId": "bed730b77e5c5d3825b66ad3cc7d327d0177a890",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3db01cfc_7f586678",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14010
+      },
+      "writtenOn": "2022-07-28T13:38:06Z",
+      "side": 1,
+      "message": "Topic ready for submission in my opinion, all issues are gone and everything seems to be working fine in all situations.",
+      "revId": "bed730b77e5c5d3825b66ad3cc7d327d0177a890",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
