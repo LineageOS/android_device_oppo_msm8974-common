@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc35e528_9e2e54c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14010
+      },
+      "writtenOn": "2023-04-06T14:23:10Z",
+      "side": 1,
+      "message": "Without this, apps such as NFC Tools show a \"Not supported\" message when reading Mifare Classic tags - but the tag itself works fine.",
+      "revId": "06cfb4bc7c7a4a437e321efdfc2f8520fec9a718",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
