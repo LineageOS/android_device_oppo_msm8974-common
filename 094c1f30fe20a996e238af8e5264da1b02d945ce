@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "613b43a9_12cdb2be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36597
+      },
+      "writtenOn": "2026-01-31T21:07:40Z",
+      "side": 1,
+      "message": "WiFi password",
+      "revId": "094c1f30fe20a996e238af8e5264da1b02d945ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
